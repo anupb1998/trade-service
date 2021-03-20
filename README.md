@@ -26,9 +26,16 @@ java -jar target/trade-service-0.0.1-SNAPSHOT.jar
 
 **Swagger UI**
 http://localhost:8081/trade-service/swagger-ui.html
+<p align="center">
+  <img src="images/swaggerui.png">
+  <br/>
+</p>
 
 How to test :-
- 1) 
+ 1) http://localhost:8081/trade-service/swagger-ui.html
+ 2) get the counter party if from counter-party-controller service in swagger ui
+ 3) get the book id from trade-book-controller service in swagger ui
+ 4) Now submit trade using above ids in trade-conroller service
 
 
 **Swagger Document**
