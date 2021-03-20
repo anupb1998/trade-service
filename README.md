@@ -48,3 +48,14 @@ http://localhost:8081/trade-service/v2/api-docs
   <img src="images/coverage.png">
   <br/>
 </p>
+
+**Swagger Document**
+
+http://localhost:8081/trade-service/v2/api-docs
+
+
+**Test Result**
+<p align="center">
+  <img src="images/testresult.png">
+  <br/>
+</p>
