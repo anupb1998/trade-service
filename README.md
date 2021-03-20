@@ -23,3 +23,21 @@ java -jar target/trade-service-0.0.1-SNAPSHOT.jar
   <img src="images/exception_handling.png">
   <br/>
 </p>
+
+**Swagger UI**
+http://localhost:8081/trade-service/swagger-ui.html
+
+How to test :-
+ 1) 
+
+
+**Swagger Document**
+
+http://localhost:8081/trade-service/v2/api-docs
+
+
+**Code Coverage**
+<p align="center">
+  <img src="images/coverage.png">
+  <br/>
+</p>

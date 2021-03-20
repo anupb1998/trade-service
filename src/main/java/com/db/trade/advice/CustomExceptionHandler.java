@@ -14,11 +14,16 @@ import com.db.trade.model.ServiceError;
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 
 	@ExceptionHandler(TradeExpiredException.class)
-	protected ResponseEntity<Object> handleStaleTrade(TradeExpiredException ex) {
+	protected ResponseEntity<Object> handleExpiredExceptionTrade(TradeExpiredException ex) {
 		String error = ex.getMessage();
 		return buildResponseEntity(new ServiceError(HttpStatus.BAD_REQUEST, error, ex));
 	}
 	@ExceptionHandler(StaleTradeException.class)
+	protected ResponseEntity<Object> handleStaleTrade(StaleTradeException ex) {
+		String error = ex.getMessage();
+		return buildResponseEntity(new ServiceError(HttpStatus.BAD_REQUEST, error, ex));
+	}
+	
 	private ResponseEntity<Object> buildResponseEntity(ServiceError apiError) {
 		return new ResponseEntity<>(apiError, apiError.getStatus());
 	}

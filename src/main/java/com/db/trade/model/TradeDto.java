@@ -13,6 +13,14 @@ public class TradeDto implements Serializable{
     private Date createdDate;
     private Date updateDate;
     private boolean isExpired;
+    public TradeDto() {
+    	
+    }
+    public TradeDto(CounterPartyDto counterParty, TradeBookDto tradeBook) {
+		super();
+		this.counterParty = counterParty;
+		this.tradeBook = tradeBook;
+	}
 	public Long getTradeId() {
 		return tradeId;
 	}

@@ -12,14 +12,15 @@ import com.db.trade.data.Trade;
 import com.db.trade.exception.StaleTradeException;
 import com.db.trade.exception.TradeExpiredException;
 import com.db.trade.repository.TradeRepository;
-import com.db.trade.validator.TradeValidationService;
+import com.db.trade.service.intf.TradeIntf;
+import com.db.trade.service.intf.TradeValidationIntf;
 
 @Service
-public class TradeService {
+public class TradeService implements TradeIntf {
 	@Autowired
 	TradeRepository repository;
 	@Autowired
-	TradeValidationService tradeValidator;
+	TradeValidationIntf tradeValidator;
 	
 	public Trade saveTrade(Trade trade) throws TradeExpiredException {
 		tradeValidator.validate(trade);

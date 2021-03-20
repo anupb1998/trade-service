@@ -6,6 +6,12 @@ public class CounterPartyDto implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private Long counterPratyId; 
     private String counterPratyName;
+    public CounterPartyDto() {
+    	
+    }
+    public CounterPartyDto(String counterPratyName) {
+		this.counterPratyName = counterPratyName;
+	}
 	public Long getCounterPratyId() {
 		return counterPratyId;
 	}

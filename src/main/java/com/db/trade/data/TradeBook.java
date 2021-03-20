@@ -18,7 +18,6 @@ public class TradeBook {
     }
     
 	public TradeBook(String bookName) {
-		super();
 		this.bookName = bookName;
 	}
 	@Id

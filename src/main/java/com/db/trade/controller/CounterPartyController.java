@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.db.trade.mapper.CounterPartyMapper;
 import com.db.trade.model.CounterPartyDto;
-import com.db.trade.service.CounterPartyService;
+import com.db.trade.service.intf.CounterPartyIntf;
 
 @RestController
 public class CounterPartyController {
 	@Autowired
-	CounterPartyService counterPartyService;
+	CounterPartyIntf counterPartyService;
 	
-	@GetMapping("/api/party")
+	@GetMapping("/v1/party")
 	public List<CounterPartyDto> getAll() {	
 		return CounterPartyMapper.INSTANCE.toCounterPartyDtos(counterPartyService.getAllCounterPartys());
 	}

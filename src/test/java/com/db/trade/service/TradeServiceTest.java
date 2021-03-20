@@ -19,16 +19,19 @@ import com.db.trade.data.Trade;
 import com.db.trade.data.TradeBook;
 import com.db.trade.exception.StaleTradeException;
 import com.db.trade.exception.TradeExpiredException;
+import com.db.trade.service.intf.CounterPartyIntf;
+import com.db.trade.service.intf.TradeBookIntf;
+import com.db.trade.service.intf.TradeIntf;
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class TradeServiceTest {
 	@Autowired
-	CounterPartyService counterPartyService;
+	CounterPartyIntf counterPartyService;
 	@Autowired
-	TradeBookService tradeBookService;
+	TradeBookIntf tradeBookService;
 	@Autowired
-	TradeService tradeService;
+	TradeIntf tradeService;
 	
 	@BeforeAll
 	public void setUp(){
@@ -56,7 +59,7 @@ class TradeServiceTest {
 		c.set(2022, 11, 1);
 		trade.setMaturityDate(c.getTime());
 		tradeService.saveTrade(trade);
-		assertEquals(1, tradeService.getAllTrades().size());
+		assertEquals(c.getTime(), trade.getMaturityDate());
 	}
 	
 	@Test

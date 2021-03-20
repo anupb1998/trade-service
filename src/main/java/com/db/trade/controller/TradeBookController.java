@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.db.trade.mapper.TradeBookMapper;
 import com.db.trade.model.TradeBookDto;
-import com.db.trade.service.TradeBookService;
+import com.db.trade.service.intf.TradeBookIntf;
 
 @RestController
 public class TradeBookController {
 	@Autowired
-	TradeBookService tradeBook;
-	@GetMapping("/api/tradebook")
+	TradeBookIntf tradeBook;
+	@GetMapping("/v1/tradebook")
 	public List<TradeBookDto> getAll() {	
 		return TradeBookMapper.INSTANCE.toBookDtos(tradeBook.getAllTradeBooks());
 	}
