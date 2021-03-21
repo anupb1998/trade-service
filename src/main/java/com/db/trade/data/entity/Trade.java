@@ -16,6 +16,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.data.annotation.Immutable;
 
+import com.db.trade.utility.TimeUtil;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
@@ -82,7 +83,7 @@ public class Trade {
 	}
 	public void setMaturityDate(Date maturityDate) {
 		this.maturityDate = maturityDate;
-		if(maturityDate.before(new Date())) {
+		if(TimeUtil.isDateInPast(maturityDate)) {
 			setIsExpired( "Y");
 		}else {
 			setIsExpired( "N");

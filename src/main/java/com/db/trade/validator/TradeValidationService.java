@@ -1,12 +1,11 @@
 package com.db.trade.validator;
 
-import java.util.Date;
-
 import org.springframework.stereotype.Service;
 
 import com.db.trade.data.entity.Trade;
 import com.db.trade.exception.TradeExpiredException;
 import com.db.trade.service.intf.TradeValidationIntf;
+import com.db.trade.utility.TimeUtil;
 
 @Service
 public class TradeValidationService implements TradeValidationIntf{
@@ -17,7 +16,7 @@ public class TradeValidationService implements TradeValidationIntf{
 	 * @throws TradeExpiredException
 	 */
 	public boolean validate(Trade trade) throws TradeExpiredException {
-		if(trade.getMaturityDate().before(new Date())) {
+		if(TimeUtil.isDateInPast(trade.getMaturityDate())) {
 			throw new TradeExpiredException("Maturity date is in past");
 		}
 		return true;
