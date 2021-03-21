@@ -1,6 +1,7 @@
 package com.db.trade.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Calendar;
 import java.util.List;
@@ -66,6 +67,22 @@ class TradeConrollerTest {
 		assertEquals(200, mvcResult.getResponse().getStatus());
 	}
 	@Test
+	void getAllTradeTest() throws Exception {
+		List<CounterParty>  resultList=counterPartyService.getAllCounterPartys();
+		List<TradeBook> tradeBookDb=tradeBookService.getAllTradeBooks();
+		Trade trade=new Trade(resultList.get(0),tradeBookDb.get(0));
+		TradeDto tradeDto =TradeMapper.INSTANCE.toTradeDto(trade);
+		Calendar c = Calendar.getInstance();
+		c.set(2022, 11, 1);
+		tradeDto.setMaturityDate(c.getTime());
+		String body=mapper.writeValueAsString(tradeDto);
+		mvc.perform(MockMvcRequestBuilders.post(uri).contentType(MediaType.APPLICATION_JSON_VALUE).content(body).accept(MediaType.APPLICATION_JSON_VALUE))
+				.andReturn();
+		MvcResult mvcGetAllResult = mvc.perform(MockMvcRequestBuilders.get(uri).accept(MediaType.APPLICATION_JSON_VALUE))
+				.andReturn();
+		assertTrue(mvcGetAllResult.getResponse().getContentAsString()!=null);
+	}
+	@Test
 	void addTradeMaturityExceptionTest() throws Exception {
 		List<CounterParty>  resultList=counterPartyService.getAllCounterPartys();
 		List<TradeBook> tradeBookDb=tradeBookService.getAllTradeBooks();
@@ -101,6 +118,7 @@ class TradeConrollerTest {
 				.andReturn();
 		assertEquals(200, mvcResultUpdate.getResponse().getStatus());
 	}
+	
 	@Test
 	void tradeStaleExceptionTest() throws Exception {
 		List<CounterParty>  resultList=counterPartyService.getAllCounterPartys();

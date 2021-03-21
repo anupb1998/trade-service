@@ -1,5 +1,7 @@
 package com.db.trade.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,6 +32,10 @@ public class TradeConroller {
 	@PutMapping("/v1/trade/update")
 	public TradeDto updateTrade(@RequestBody TradeDto trade) throws StaleTradeException {
 		return TradeMapper.INSTANCE.toTradeDto(tradeService.updateTrade(TradeMapper.INSTANCE.toTrade(trade)));
+	}
+	@GetMapping("/v1/trade")
+	public List<TradeDto> getAllTrades() {	
+		return TradeMapper.INSTANCE.toTradeDtos(tradeService.getAllTrades());
 	}
 
 }

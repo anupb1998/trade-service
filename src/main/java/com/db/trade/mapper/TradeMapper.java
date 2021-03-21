@@ -14,6 +14,6 @@ public interface TradeMapper {
 
 	TradeDto toTradeDto(Trade trade);
 
-	List<Trade> toTradeDtos(List<Trade> tradeList);
+	List<TradeDto> toTradeDtos(List<Trade> tradeList);
 	Trade toTrade(TradeDto trade);
 }

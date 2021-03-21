@@ -46,7 +46,7 @@ class TradeMapperTest {
 		List<Trade> tradeList=new ArrayList<>();
 		tradeList.add(trade);
 		tradeList.add(tradeSecond);
-		List<Trade> dto= TradeMapper.INSTANCE.toTradeDtos(tradeList);
+		List<TradeDto> dto= TradeMapper.INSTANCE.toTradeDtos(tradeList);
 		assertEquals(tradeList.size(), dto.size());
 	}
 
