@@ -7,12 +7,14 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.db.trade.data.CounterParty;
 import com.db.trade.service.intf.CounterPartyIntf;
 
 
 @SpringBootTest
+@ActiveProfiles("test")
 class CounterPartyServiceTest {
 	@Autowired
 	CounterPartyIntf counterPartyService;	

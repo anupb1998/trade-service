@@ -9,7 +9,9 @@ mvn clean install
 **Run Steps**
 
 java -jar target/trade-service-0.0.1-SNAPSHOT.jar
-
+java -Dspring.profiles.active=dev -jar target/trade-service-0.0.1-SNAPSHOT.jar
+java -Dspring.profiles.active=qa -jar target/trade-service-0.0.1-SNAPSHOT.jar
+java -Dspring.profiles.active=prod -jar target/trade-service-0.0.1-SNAPSHOT.jar
 
 # The System Design
 

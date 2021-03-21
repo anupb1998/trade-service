@@ -8,6 +8,7 @@ import java.util.Calendar;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.db.trade.data.CounterParty;
 import com.db.trade.data.Trade;
@@ -15,6 +16,7 @@ import com.db.trade.data.TradeBook;
 import com.db.trade.exception.TradeExpiredException;
 import com.db.trade.service.intf.TradeValidationIntf;
 @SpringBootTest
+@ActiveProfiles("test")
 class TradeValidationServiceTest {
 	@Autowired
 	TradeValidationIntf tradeValService;

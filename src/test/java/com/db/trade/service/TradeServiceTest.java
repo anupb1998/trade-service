@@ -13,6 +13,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import com.db.trade.data.CounterParty;
 import com.db.trade.data.Trade;
@@ -24,6 +25,7 @@ import com.db.trade.service.intf.TradeBookIntf;
 import com.db.trade.service.intf.TradeIntf;
 
 @SpringBootTest
+@ActiveProfiles("test")
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class TradeServiceTest {
 	@Autowired
