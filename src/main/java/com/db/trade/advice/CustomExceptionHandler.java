@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import com.db.trade.dto.model.ServiceError;
 import com.db.trade.exception.StaleTradeException;
 import com.db.trade.exception.TradeExpiredException;
-import com.db.trade.model.ServiceError;
 
 @ControllerAdvice
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {

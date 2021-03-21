@@ -5,8 +5,8 @@ import java.util.List;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-import com.db.trade.data.CounterParty;
-import com.db.trade.model.CounterPartyDto;
+import com.db.trade.data.entity.CounterParty;
+import com.db.trade.dto.model.CounterPartyDto;
 
 @Mapper
 public interface CounterPartyMapper {

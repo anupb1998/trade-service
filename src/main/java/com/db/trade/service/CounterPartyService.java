@@ -8,7 +8,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.db.trade.data.CounterParty;
+import com.db.trade.data.entity.CounterParty;
 import com.db.trade.repository.CounterPartyRepository;
 import com.db.trade.service.intf.CounterPartyIntf;
 

@@ -8,7 +8,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.db.trade.data.TradeBook;
+import com.db.trade.data.entity.TradeBook;
 import com.db.trade.repository.TradeBookRepository;
 import com.db.trade.service.intf.TradeBookIntf;
 

@@ -8,8 +8,8 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import com.db.trade.data.CounterParty;
-import com.db.trade.data.TradeBook;
+import com.db.trade.data.entity.CounterParty;
+import com.db.trade.data.entity.TradeBook;
 
 @Component
 public class DataLoader implements ApplicationRunner {

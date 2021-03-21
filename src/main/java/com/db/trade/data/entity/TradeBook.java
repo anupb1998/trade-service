@@ -1,4 +1,4 @@
-package com.db.trade.data;
+package com.db.trade.data.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +10,8 @@ import org.springframework.data.annotation.Immutable;
 @Entity
 @Immutable
 public class TradeBook {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
     private Long bookId; 
     private String bookName;
     public TradeBook() {
@@ -20,8 +21,7 @@ public class TradeBook {
 	public TradeBook(String bookName) {
 		this.bookName = bookName;
 	}
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	
 	public Long getBookId() {
 		return bookId;
 	}

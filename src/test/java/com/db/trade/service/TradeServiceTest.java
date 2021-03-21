@@ -15,9 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import com.db.trade.data.CounterParty;
-import com.db.trade.data.Trade;
-import com.db.trade.data.TradeBook;
+import com.db.trade.data.entity.CounterParty;
+import com.db.trade.data.entity.Trade;
+import com.db.trade.data.entity.TradeBook;
 import com.db.trade.exception.StaleTradeException;
 import com.db.trade.exception.TradeExpiredException;
 import com.db.trade.service.intf.CounterPartyIntf;

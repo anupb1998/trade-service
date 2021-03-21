@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.db.trade.dto.model.CounterPartyDto;
 import com.db.trade.mapper.CounterPartyMapper;
-import com.db.trade.model.CounterPartyDto;
 import com.db.trade.service.intf.CounterPartyIntf;
 
 @RestController

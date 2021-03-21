@@ -5,8 +5,8 @@ import java.util.List;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-import com.db.trade.data.Trade;
-import com.db.trade.model.TradeDto;
+import com.db.trade.data.entity.Trade;
+import com.db.trade.dto.model.TradeDto;
 
 @Mapper
 public interface TradeMapper {

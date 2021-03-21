@@ -2,7 +2,6 @@ package com.db.trade.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -20,11 +19,11 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import com.db.trade.data.CounterParty;
-import com.db.trade.data.Trade;
-import com.db.trade.data.TradeBook;
+import com.db.trade.data.entity.CounterParty;
+import com.db.trade.data.entity.Trade;
+import com.db.trade.data.entity.TradeBook;
+import com.db.trade.dto.model.TradeDto;
 import com.db.trade.mapper.TradeMapper;
-import com.db.trade.model.TradeDto;
 import com.db.trade.service.intf.CounterPartyIntf;
 import com.db.trade.service.intf.TradeBookIntf;
 import com.db.trade.service.intf.TradeIntf;

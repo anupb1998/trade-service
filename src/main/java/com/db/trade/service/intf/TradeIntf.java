@@ -3,7 +3,7 @@ package com.db.trade.service.intf;
 import java.util.List;
 import java.util.Optional;
 
-import com.db.trade.data.Trade;
+import com.db.trade.data.entity.Trade;
 import com.db.trade.exception.StaleTradeException;
 import com.db.trade.exception.TradeExpiredException;
 

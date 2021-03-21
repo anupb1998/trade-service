@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.db.trade.data.TradeBook;
-import com.db.trade.model.TradeBookDto;
+import com.db.trade.data.entity.TradeBook;
+import com.db.trade.dto.model.TradeBookDto;
 
 class TradeBookMapperTest {
 

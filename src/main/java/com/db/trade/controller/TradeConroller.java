@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.db.trade.dto.model.TradeDto;
 import com.db.trade.exception.StaleTradeException;
 import com.db.trade.exception.TradeExpiredException;
 import com.db.trade.mapper.TradeMapper;
-import com.db.trade.model.TradeDto;
 import com.db.trade.service.intf.TradeIntf;
 
 @RestController

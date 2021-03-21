@@ -7,8 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.db.trade.data.CounterParty;
-import com.db.trade.model.CounterPartyDto;
+import com.db.trade.data.entity.CounterParty;
+import com.db.trade.dto.model.CounterPartyDto;
 
 class CounterPartyMapperTest {
 

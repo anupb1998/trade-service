@@ -1,4 +1,4 @@
-package com.db.trade.data;
+package com.db.trade.data.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,7 +10,8 @@ import org.springframework.data.annotation.Immutable;
 @Entity
 @Immutable
 public class CounterParty {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long counterPartyId;
 	private String counterPratyName;
 	public CounterParty() {
@@ -18,9 +19,7 @@ public class CounterParty {
 	}
 	public CounterParty(String counterPratyName) {
 		this.counterPratyName = counterPratyName;
-	}
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	}	
 	public Long getCounterPratyId() {
 		return counterPartyId;
 	}

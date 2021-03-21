@@ -1,4 +1,4 @@
-package com.db.trade.model;
+package com.db.trade.dto.model;
 
 import org.springframework.http.HttpStatus;
 

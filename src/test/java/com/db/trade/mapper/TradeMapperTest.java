@@ -8,12 +8,12 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.db.trade.data.CounterParty;
-import com.db.trade.data.Trade;
-import com.db.trade.data.TradeBook;
-import com.db.trade.model.CounterPartyDto;
-import com.db.trade.model.TradeBookDto;
-import com.db.trade.model.TradeDto;
+import com.db.trade.data.entity.CounterParty;
+import com.db.trade.data.entity.Trade;
+import com.db.trade.data.entity.TradeBook;
+import com.db.trade.dto.model.CounterPartyDto;
+import com.db.trade.dto.model.TradeBookDto;
+import com.db.trade.dto.model.TradeDto;
 
 class TradeMapperTest {
 

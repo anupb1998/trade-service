@@ -1,4 +1,4 @@
-package com.db.trade.data;
+package com.db.trade.data.entity;
 
 import java.util.Date;
 

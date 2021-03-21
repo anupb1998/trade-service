@@ -3,7 +3,7 @@ package com.db.trade.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.db.trade.data.TradeBook;
+import com.db.trade.data.entity.TradeBook;
 
 @Repository
 public interface TradeBookRepository extends JpaRepository<TradeBook, Long>{
